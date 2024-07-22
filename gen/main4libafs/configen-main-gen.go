@@ -30,7 +30,9 @@ func (inst *autoRegistrar) register(factory comFactory) error {
 func (inst*autoRegistrar) addAll() error {
 
     
+    inst.register(&p26b4ed4469_code_AFSystemService{})
     inst.register(&p26b4ed4469_code_ImplAFS{})
+    inst.register(&p26b4ed4469_code_LocalFileSystemDriver{})
 
 
     return nil
