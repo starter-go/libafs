@@ -49,9 +49,26 @@ func (inst *LocalFileSystemDriver) Fetch(uri afs.URI) (afs.Path, error) {
 	} else {
 		return nil, fmt.Errorf("unsupported AFS URI [%s]", str)
 	}
+	str = inst.removeQueryInfo(str)
 	fs := inst.getFS()
 	path := fs.NewPath(str)
 	return path, nil
+}
+
+func (inst *LocalFileSystemDriver) removeQueryInfo(str string) string {
+	hasQuery := false
+	buffer := []rune(str)
+	for i, ch := range buffer {
+		if ch == '?' {
+			buffer = buffer[0:i]
+			hasQuery = true
+			break
+		}
+	}
+	if !hasQuery {
+		return str
+	}
+	return string(buffer)
 }
 
 func (inst *LocalFileSystemDriver) getFS() afs.FS {
