@@ -9,8 +9,8 @@ import (
 
 const (
 	theModuleName     = "github.com/starter-go/libafs"
-	theModuleVersion  = "v0.0.6"
-	theModuleRevision = 6
+	theModuleVersion  = "v0.0.7"
+	theModuleRevision = 7
 
 	theMainModuleResPath = "src/main/resources"
 	theTestModuleResPath = "src/test/resources"
