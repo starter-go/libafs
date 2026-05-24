@@ -17,18 +17,18 @@ type ExampleController struct {
 
 }
 
-func (inst *ExampleController) _impl() units.Units {
+func (inst *ExampleController) _impl() units.Unit {
 	return inst
 }
 
 // Units ...
-func (inst *ExampleController) Units(list []*units.Registration) []*units.Registration {
+func (inst *ExampleController) ListRegistrations(list []*units.Registration) []*units.Registration {
 
 	r1 := &units.Registration{
 		Name:     "test-1",
 		Enabled:  true,
 		Priority: 0,
-		Test:     inst.test1,
+		Do:       inst.test1,
 	}
 
 	list = append(list, r1)

@@ -10,11 +10,12 @@ import (
 func main() {
 	m := libafs.ModuleForTest()
 
-	// i := starter.Init(os.Args)
-	// i.MainModule(m)
-	// i.WithPanic(true).Run()
+	ctx := units.NewContext()
 
-	r := units.NewRunner()
-	r.Dependencies(m)
-	r.EnablePanic(true).Run(os.Args)
+	ctx.Arguments = os.Args
+	ctx.Module = m
+	ctx.UsePanic = true
+
+	units.Run(ctx)
+
 }
