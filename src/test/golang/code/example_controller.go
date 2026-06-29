@@ -1,6 +1,7 @@
 package code
 
 import (
+	"context"
 	"os"
 
 	"github.com/starter-go/afs"
@@ -36,7 +37,7 @@ func (inst *ExampleController) ListRegistrations(list []*units.Registration) []*
 }
 
 // Units ...
-func (inst *ExampleController) test1() error {
+func (inst *ExampleController) test1(cc context.Context) error {
 
 	wd, err := os.Getwd()
 	if err != nil {

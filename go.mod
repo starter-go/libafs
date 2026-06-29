@@ -6,7 +6,7 @@ require (
 	github.com/starter-go/afs v0.9.13 // direct
 	github.com/starter-go/application v0.9.28 // direct
 	github.com/starter-go/starter v1.0.14 // direct
-	github.com/starter-go/units v0.1.1 // direct
+	github.com/starter-go/units v0.1.3 // direct
 	github.com/starter-go/vlog v0.9.12 // direct
 )
 
