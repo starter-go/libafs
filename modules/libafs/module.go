@@ -5,6 +5,7 @@ import (
 	"github.com/starter-go/libafs"
 	"github.com/starter-go/libafs/gen/main4libafs"
 	"github.com/starter-go/libafs/gen/test4libafs"
+	"github.com/starter-go/units/modules/units"
 )
 
 // Module ...
@@ -21,6 +22,9 @@ func ModuleForTest() application.Module {
 
 	mb := libafs.NewTestModule()
 	mb.Components(test4libafs.ExportComponents)
+
 	mb.Depend(parent)
+	mb.Depend(units.Module())
+
 	return mb.Create()
 }

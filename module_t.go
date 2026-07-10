@@ -9,8 +9,8 @@ import (
 
 const (
 	theModuleName     = "github.com/starter-go/libafs"
-	theModuleVersion  = "v0.0.9"
-	theModuleRevision = 9
+	theModuleVersion  = "v0.10.0"
+	theModuleRevision = 10
 )
 
 const (
